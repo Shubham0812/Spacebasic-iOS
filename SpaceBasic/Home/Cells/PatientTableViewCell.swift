@@ -45,9 +45,12 @@ class PatientTableViewCell: UITableViewCell {
     
     var patientData: SBPatient? {
         didSet{
-            //            userImageButton.af_setImage(for: .normal, url: URL(string: patientData!.userImg)!)
+            userImageButton.af_setImage(for: .normal, url: URL(string: patientData!.userImg)!)
             self.studentNameLabel.text = patientData?.studentName
-            self.studentBlockLabel.text = patientData!.studentBlock + " Block"
+            self.studentBlockLabel.text = patientData!.studentBlock
+            if (!(patientData!.studentBlock.lowercased().contains("block"))){
+                self.studentBlockLabel.text! += " Block"
+            }
             self.studentRoomLabel.text = patientData?.studentRoomNo
             if let date = patientData?.from {
                 let splitStartDate = date.components(separatedBy: " ")
@@ -69,6 +72,8 @@ class PatientTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        self.userImageButton.layer.cornerRadius = self.userImageButton.frame.width / 2.0
+        self.userImageButton.clipsToBounds = true
         self.containerView.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.containerView.layer.shadowColor = UIColor.black.cgColor
         self.containerView.layer.shadowOpacity = 0.4
