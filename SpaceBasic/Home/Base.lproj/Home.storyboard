@@ -65,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Leave Applications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-t6-sNW">
-                                        <rect key="frame" x="24" y="108" width="197" height="23.5"/>
+                                        <rect key="frame" x="24" y="108" width="231" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -76,8 +76,12 @@
                                     <constraint firstItem="feO-3X-SWg" firstAttribute="top" secondItem="VPD-As-cgw" secondAttribute="top" constant="48" id="7P4-VL-C9D"/>
                                     <constraint firstItem="Yky-ga-yY0" firstAttribute="top" secondItem="VPD-As-cgw" secondAttribute="top" constant="48" id="APp-bX-nEp"/>
                                     <constraint firstItem="ptX-t6-sNW" firstAttribute="top" secondItem="Yky-ga-yY0" secondAttribute="bottom" constant="28" id="Ceg-7v-yaY"/>
-                                    <constraint firstItem="Yky-ga-yY0" firstAttribute="leading" secondItem="VPD-As-cgw" secondAttribute="leading" constant="24" id="FKI-Hs-WT9"/>
-                                    <constraint firstItem="ptX-t6-sNW" firstAttribute="leading" secondItem="VPD-As-cgw" secondAttribute="leading" constant="24" id="II9-zl-0KA"/>
+                                    <constraint firstItem="Yky-ga-yY0" firstAttribute="leading" secondItem="VPD-As-cgw" secondAttribute="leading" constant="24" id="FKI-Hs-WT9">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="58"/>
+                                    </constraint>
+                                    <constraint firstItem="ptX-t6-sNW" firstAttribute="leading" secondItem="VPD-As-cgw" secondAttribute="leading" constant="24" id="II9-zl-0KA">
+                                        <variation key="widthClass=regular" constant="62"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="feO-3X-SWg" secondAttribute="trailing" constant="24" id="WQL-O3-qRC"/>
                                     <constraint firstAttribute="height" constant="150" id="hVH-Lz-V8t"/>
                                 </constraints>
@@ -90,12 +94,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N5a-0j-cDI" secondAttribute="bottom" id="QV2-lo-8by"/>
-                            <constraint firstItem="VPD-As-cgw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vf1-6g-N5U"/>
+                            <constraint firstItem="VPD-As-cgw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vf1-6g-N5U">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="VPD-As-cgw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cmr-Rh-spA"/>
-                            <constraint firstItem="N5a-0j-cDI" firstAttribute="top" secondItem="VPD-As-cgw" secondAttribute="bottom" id="eZG-1j-WO7"/>
-                            <constraint firstItem="N5a-0j-cDI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mYt-co-Z9l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VPD-As-cgw" secondAttribute="trailing" id="nS1-su-ICc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N5a-0j-cDI" secondAttribute="trailing" id="oM4-Iv-AqT"/>
+                            <constraint firstItem="N5a-0j-cDI" firstAttribute="top" secondItem="VPD-As-cgw" secondAttribute="bottom" id="eZG-1j-WO7">
+                                <variation key="widthClass=regular" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="N5a-0j-cDI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mYt-co-Z9l">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="VPD-As-cgw" secondAttribute="trailing" id="nS1-su-ICc">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="N5a-0j-cDI" secondAttribute="trailing" id="oM4-Iv-AqT">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
