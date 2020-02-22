@@ -18,6 +18,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var pageCounter = 0
+    var currentCount = 0
     
     //MARK:- lifecycle methods for the view controller
     override func viewDidLoad() {
@@ -27,12 +29,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: "PatientTableViewCell", bundle: nil), forCellReuseIdentifier: PatientTableViewCell.identifier)
-        
-        SBAPI.getPatientData(pageNo: 2) {(res) in
-            print("res", res)
-            self.patientData = res!
-            self.tableView.reloadData()
-        }
+        self.fetchData()
     }
     
     //MARK:- table view controller delegates
@@ -46,6 +43,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (indexPath.row == currentCount - 2) {
+            print("call new api")
+            self.fetchData()
+        }
         if let cell = tableView.dequeueReusableCell(withIdentifier: PatientTableViewCell.identifier, for: indexPath) as? PatientTableViewCell {
             cell.patientData = patientData[indexPath.row]
             return cell
@@ -53,6 +54,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         fatalError()
     }
     
+    
+    func fetchData(){
+        pageCounter += 1
+        print("The Page Counter value", self.pageCounter)
+        SBAPI.getPatientData(pageNo: pageCounter) {(res) in
+            self.patientData += res!
+            self.currentCount += res!.count
+            print("Patient data", self.patientData, "Count", self.patientData.count)
+            self.tableView.reloadData()
+        }
+    }
     
     //MARK:- outlet functions for the view controller
     

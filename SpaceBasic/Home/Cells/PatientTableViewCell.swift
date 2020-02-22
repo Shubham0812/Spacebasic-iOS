@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import Alamofire
+import AlamofireImage
 
 class PatientTableViewCell: UITableViewCell {
-
+    
     static let identifier = "PatientTableViewCell"
     
     //MARK:- outlets for the cell
@@ -18,7 +18,7 @@ class PatientTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var regularView: UIView!
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userImageButton: UIButton!
     @IBOutlet weak var leaveTypeImageView: UIImageView!
     @IBOutlet weak var leaveTypeLabel: UILabel!
     @IBOutlet weak var appliedOnLabel: UILabel!
@@ -26,29 +26,46 @@ class PatientTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryTypeLabel: UILabel!
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var studentBlockLabel: UILabel!
+    @IBOutlet weak var leaveType: UILabel!
     
     @IBOutlet weak var studentRoomLabel: UILabel!
+    
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+    
+    fileprivate lazy var newDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd yyyy"
+        return formatter
+    }()
     
     
     var patientData: SBPatient? {
         didSet{
-            print(URL(string: patientData!.userImg))
-            Alamofire.request(URL(string: patientData!.userImg)!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { (response ) in
-                
-                switch response {
-                    
-                }
-                self.userImage.image  = UIImage(data: response, scale: 1)
-                print (response)
+            //            userImageButton.af_setImage(for: .normal, url: URL(string: patientData!.userImg)!)
+            self.studentNameLabel.text = patientData?.studentName
+            self.studentBlockLabel.text = patientData!.studentBlock + " Block"
+            self.studentRoomLabel.text = patientData?.studentRoomNo
+            if let date = patientData?.from {
+                let splitStartDate = date.components(separatedBy: " ")
+                let startDate = self.newDateFormatter.string(from: dateFormatter.date(from: splitStartDate[0])!)
+                self.appliedOnLabel.text = "Applied on \(startDate)"
+                self.leaveType.text = patientData?.leaveType
+                self.durationLabel.text =  "\(startDate)"
             }
-//            Alamofire.request().response { (request, response, data, error) in
-//                 self.myImageView.image = UIImage(data: data, scale:1)
-//             }
-//            userImage.image = af_setImage(for: .normal, url: URL(string: patientData?.userImg))
-
+            
+            
+            if let date = patientData?.to {
+                let endDate = self.newDateFormatter.string(from: dateFormatter.date(from: date.components(separatedBy: " ")[0])!)
+                self.durationLabel.text! += " to " + endDate
+            }
+            
         }
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
@@ -56,15 +73,14 @@ class PatientTableViewCell: UITableViewCell {
         self.containerView.layer.shadowColor = UIColor.black.cgColor
         self.containerView.layer.shadowOpacity = 0.4
         self.containerView.layer.shadowRadius = 1
-        
         self.regularView.roundCorners(corners: .topLeft, radius: 15)
-
+        
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
 }
