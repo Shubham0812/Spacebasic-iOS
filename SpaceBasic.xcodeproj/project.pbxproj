@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		51A6995E2400FC6B006DAB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6995D2400FC6B006DAB07 /* AppDelegate.swift */; };
-		51A699622400FC6B006DAB07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A699612400FC6B006DAB07 /* ViewController.swift */; };
-		51A699652400FC6B006DAB07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A699632400FC6B006DAB07 /* Main.storyboard */; };
+		51A699622400FC6B006DAB07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A699612400FC6B006DAB07 /* HomeViewController.swift */; };
+		51A699652400FC6B006DAB07 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A699632400FC6B006DAB07 /* Home.storyboard */; };
 		51A699672400FC6D006DAB07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A699662400FC6D006DAB07 /* Assets.xcassets */; };
 		51A6996A2400FC6D006DAB07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A699682400FC6D006DAB07 /* LaunchScreen.storyboard */; };
 		51A699752400FC6D006DAB07 /* SpaceBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A699742400FC6D006DAB07 /* SpaceBasicTests.swift */; };
 		51A699802400FC6D006DAB07 /* SpaceBasicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6997F2400FC6D006DAB07 /* SpaceBasicUITests.swift */; };
 		51A6998F2400FCAB006DAB07 /* SBAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6998E2400FCAB006DAB07 /* SBAPI.swift */; };
+		51A6999224010587006DAB07 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6999124010587006DAB07 /* TabViewController.swift */; };
+		51A6999924010661006DAB07 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A6999424010603006DAB07 /* Montserrat-Bold.ttf */; };
+		51A6999A24010663006DAB07 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A6999524010603006DAB07 /* Montserrat-Medium.ttf */; };
+		51A6999B24010666006DAB07 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A6999724010603006DAB07 /* Montserrat-ExtraLight.ttf */; };
+		51A6999C24010669006DAB07 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A6999624010603006DAB07 /* Montserrat-Regular.ttf */; };
+		51A6999D2401066D006DAB07 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A6999824010603006DAB07 /* Montserrat-Thin.ttf */; };
+		51A6999F240108A8006DAB07 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6999E240108A8006DAB07 /* DetailsViewController.swift */; };
+		51A699A224010A22006DAB07 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A699A124010A22006DAB07 /* ViewExtensions.swift */; };
+		51A699A424010A6A006DAB07 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A699A324010A6A006DAB07 /* UIColorExtensions.swift */; };
+		51A699A824010D49006DAB07 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A699A624010D49006DAB07 /* PatientTableViewCell.swift */; };
+		51A699A924010D49006DAB07 /* PatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A699A724010D49006DAB07 /* PatientTableViewCell.xib */; };
 		8E60012E636D28C170D17F7D /* Pods_SpaceBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D2AED2A128A2FC6501490 /* Pods_SpaceBasic.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +52,8 @@
 		4DD80B2A05679371CC2C49AF /* Pods-SpaceBasic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceBasic.debug.xcconfig"; path = "Target Support Files/Pods-SpaceBasic/Pods-SpaceBasic.debug.xcconfig"; sourceTree = "<group>"; };
 		51A6995A2400FC6B006DAB07 /* SpaceBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A6995D2400FC6B006DAB07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51A699612400FC6B006DAB07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		51A699642400FC6B006DAB07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		51A699612400FC6B006DAB07 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		51A699642400FC6B006DAB07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		51A699662400FC6D006DAB07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51A699692400FC6D006DAB07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51A6996B2400FC6D006DAB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +64,17 @@
 		51A6997F2400FC6D006DAB07 /* SpaceBasicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceBasicUITests.swift; sourceTree = "<group>"; };
 		51A699812400FC6D006DAB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51A6998E2400FCAB006DAB07 /* SBAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBAPI.swift; sourceTree = "<group>"; };
+		51A6999124010587006DAB07 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		51A6999424010603006DAB07 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		51A6999524010603006DAB07 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		51A6999624010603006DAB07 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		51A6999724010603006DAB07 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		51A6999824010603006DAB07 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		51A6999E240108A8006DAB07 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		51A699A124010A22006DAB07 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		51A699A324010A6A006DAB07 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		51A699A624010D49006DAB07 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		51A699A724010D49006DAB07 /* PatientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +128,11 @@
 		51A6995C2400FC6B006DAB07 /* SpaceBasic */ = {
 			isa = PBXGroup;
 			children = (
-				51A6998D2400FC75006DAB07 /* API */,
+				51A699A024010A11006DAB07 /* Extensions */,
+				51A6999024010554006DAB07 /* Home */,
 				51A6995D2400FC6B006DAB07 /* AppDelegate.swift */,
-				51A699612400FC6B006DAB07 /* ViewController.swift */,
-				51A699632400FC6B006DAB07 /* Main.storyboard */,
+				51A6998D2400FC75006DAB07 /* API */,
+				51A69993240105ED006DAB07 /* Montserrat */,
 				51A699662400FC6D006DAB07 /* Assets.xcassets */,
 				51A699682400FC6D006DAB07 /* LaunchScreen.storyboard */,
 				51A6996B2400FC6D006DAB07 /* Info.plist */,
@@ -141,6 +164,48 @@
 				51A6998E2400FCAB006DAB07 /* SBAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		51A6999024010554006DAB07 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				51A699A524010D35006DAB07 /* Cells */,
+				51A699612400FC6B006DAB07 /* HomeViewController.swift */,
+				51A6999E240108A8006DAB07 /* DetailsViewController.swift */,
+				51A699632400FC6B006DAB07 /* Home.storyboard */,
+				51A6999124010587006DAB07 /* TabViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		51A69993240105ED006DAB07 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				51A6999424010603006DAB07 /* Montserrat-Bold.ttf */,
+				51A6999724010603006DAB07 /* Montserrat-ExtraLight.ttf */,
+				51A6999524010603006DAB07 /* Montserrat-Medium.ttf */,
+				51A6999624010603006DAB07 /* Montserrat-Regular.ttf */,
+				51A6999824010603006DAB07 /* Montserrat-Thin.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		51A699A024010A11006DAB07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51A699A124010A22006DAB07 /* ViewExtensions.swift */,
+				51A699A324010A6A006DAB07 /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51A699A524010D35006DAB07 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				51A699A624010D49006DAB07 /* PatientTableViewCell.swift */,
+				51A699A724010D49006DAB07 /* PatientTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B1B282076B1A5B9DE4AE783F /* Pods */ = {
@@ -266,9 +331,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A6999924010661006DAB07 /* Montserrat-Bold.ttf in Resources */,
+				51A6999B24010666006DAB07 /* Montserrat-ExtraLight.ttf in Resources */,
+				51A6999C24010669006DAB07 /* Montserrat-Regular.ttf in Resources */,
+				51A6999A24010663006DAB07 /* Montserrat-Medium.ttf in Resources */,
 				51A6996A2400FC6D006DAB07 /* LaunchScreen.storyboard in Resources */,
+				51A699A924010D49006DAB07 /* PatientTableViewCell.xib in Resources */,
 				51A699672400FC6D006DAB07 /* Assets.xcassets in Resources */,
-				51A699652400FC6B006DAB07 /* Main.storyboard in Resources */,
+				51A6999D2401066D006DAB07 /* Montserrat-Thin.ttf in Resources */,
+				51A699652400FC6B006DAB07 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,9 +406,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51A699622400FC6B006DAB07 /* ViewController.swift in Sources */,
+				51A6999224010587006DAB07 /* TabViewController.swift in Sources */,
+				51A699A424010A6A006DAB07 /* UIColorExtensions.swift in Sources */,
+				51A699622400FC6B006DAB07 /* HomeViewController.swift in Sources */,
 				51A6998F2400FCAB006DAB07 /* SBAPI.swift in Sources */,
 				51A6995E2400FC6B006DAB07 /* AppDelegate.swift in Sources */,
+				51A699A824010D49006DAB07 /* PatientTableViewCell.swift in Sources */,
+				51A699A224010A22006DAB07 /* ViewExtensions.swift in Sources */,
+				51A6999F240108A8006DAB07 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,12 +449,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		51A699632400FC6B006DAB07 /* Main.storyboard */ = {
+		51A699632400FC6B006DAB07 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				51A699642400FC6B006DAB07 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		51A699682400FC6D006DAB07 /* LaunchScreen.storyboard */ = {

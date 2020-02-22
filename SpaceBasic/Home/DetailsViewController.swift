@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailsViewController.swift
 //  SpaceBasic
 //
 //  Created by Shubham Singh on 22/02/20.
@@ -8,18 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class DetailsViewController: UIViewController {
+    
+    static let identifier = "DetailsViewController"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
-        SBAPI.getPatientData(pageNo: 2) {(res) in
-            print("res", res)
-        }
     }
-
-
 }
-

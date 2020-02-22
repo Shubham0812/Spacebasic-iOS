@@ -10,91 +10,88 @@ import Foundation
 import Alamofire
 
 
-enum SBAPI : URLRequestConvertible {
+class SBPatient: ResponseObjectSerializable, Codable {
+    let id: Int
+    let userImg: String
+    let from: String
+    let to: String
+    let leaveType: String
+    let category: String
+    let title: String
+    let description: String
+    let studentName: String
+    let studentRoomNo: String
+    let studentBlock: String
+    let createdDate: String
+    let updatedDate: String
+    let leaveStatus: String
+    let iconColor: String
+    let statusColor: String
     
-    
-    
-    class SBPatient: ResponseObjectSerializable, Codable {
-        let id: Int
-        let userImg: String
-        let from: String
-        let to: String
-        let leaveType: String
-        let category: String
-        let title: String
-        let description: String
-        let studentName: String
-        let studentRoomNo: String
-        let studentBlock: String
-        let createdDate: String
-        let updatedDate: String
-        let leaveStatus: String
-        let iconColor: String
-        let statusColor: String
-        
-        required init?(response: HTTPURLResponse, representation: Any) {
-            guard
-                let representation = representation as? [String: Any],
-                let id = representation["id"] as? Int,
-                let userImg = representation["user_img"] as? String,
-                let from = representation["from"] as? String,
-                let to = representation["to"] as? String,
-                let leaveType = representation["leavetype"] as? String,
-                let category = representation["category"] as? String,
-                let title = representation["title"] as? String,
-                let description = representation["description"] as? String,
-                let studentName = representation["student_name"] as? String,
-                let studentRoomNo = representation["student_room_no"] as? String,
-                let studentBlock = representation["student_block"] as? String,
-                let createdDate = representation["created_date"] as? String,
-                let updatedDate = representation["updated_date"] as? String,
-                let leaveStatus = representation["leave_status"] as? String,
-                let iconColor = representation["icon_color"] as? String,
-                let statusColor = representation["status_color"] as? String
-                else {
-                    return nil
-            }
-            self.id = id
-            self.userImg = userImg
-            self.from = from
-            self.to = to
-            self.leaveType = leaveType
-            self.category = category
-            self.title = title
-            self.description = description
-            self.studentName = studentName
-            self.studentRoomNo = studentRoomNo
-            self.studentBlock = studentBlock
-            self.createdDate = createdDate
-            self.updatedDate = updatedDate
-            self.leaveStatus = leaveStatus
-            self.iconColor = iconColor
-            self.statusColor = statusColor
+    required init?(response: HTTPURLResponse, representation: Any) {
+        guard
+            let representation = representation as? [String: Any],
+            let id = representation["id"] as? Int,
+            let userImg = representation["user_img"] as? String,
+            let from = representation["from"] as? String,
+            let to = representation["to"] as? String,
+            let leaveType = representation["leavetype"] as? String,
+            let category = representation["category"] as? String,
+            let title = representation["title"] as? String,
+            let description = representation["description"] as? String,
+            let studentName = representation["student_name"] as? String,
+            let studentRoomNo = representation["student_room_no"] as? String,
+            let studentBlock = representation["student_block"] as? String,
+            let createdDate = representation["created_date"] as? String,
+            let updatedDate = representation["updated_date"] as? String,
+            let leaveStatus = representation["leave_status"] as? String,
+            let iconColor = representation["icon_color"] as? String,
+            let statusColor = representation["status_color"] as? String
+            else {
+                return nil
         }
-        
-        private enum CodingKeys: String, CodingKey{
-            case id = "id"
-            case userImg = "user_img"
-            case from = "from"
-            case to = "to"
-            case leaveType = "leavetype"
-            case category = "category"
-            case title = "title"
-            case description = "description"
-            case studentName = "student_name"
-            case studentRoomNo = "student_room_no"
-            case studentBlock = "student_block"
-            case createdDate = "created_date"
-            case updatedDate = "updated_date"
-            case leaveStatus = "leave_status"
-            case iconColor = "icon_color"
-            case statusColor = "status_color"
-            
-        }
+        self.id = id
+        self.userImg = userImg
+        self.from = from
+        self.to = to
+        self.leaveType = leaveType
+        self.category = category
+        self.title = title
+        self.description = description
+        self.studentName = studentName
+        self.studentRoomNo = studentRoomNo
+        self.studentBlock = studentBlock
+        self.createdDate = createdDate
+        self.updatedDate = updatedDate
+        self.leaveStatus = leaveStatus
+        self.iconColor = iconColor
+        self.statusColor = statusColor
     }
     
-    case patientData(pageNo: Int)
+    private enum CodingKeys: String, CodingKey{
+        case id = "id"
+        case userImg = "user_img"
+        case from = "from"
+        case to = "to"
+        case leaveType = "leavetype"
+        case category = "category"
+        case title = "title"
+        case description = "description"
+        case studentName = "student_name"
+        case studentRoomNo = "student_room_no"
+        case studentBlock = "student_block"
+        case createdDate = "created_date"
+        case updatedDate = "updated_date"
+        case leaveStatus = "leave_status"
+        case iconColor = "icon_color"
+        case statusColor = "status_color"
+        
+    }
+}
+
+enum SBAPI : URLRequestConvertible {
     
+    case patientData(pageNo: Int)
     
     static let endpoint = URL(string: "http://sandbox.spacebasic.com/api/test/")
     
